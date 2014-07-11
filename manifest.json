@@ -1,0 +1,30 @@
+{
+  "name": "QuickHAC",
+  "version": "3.0.0",
+  "manifest_version": 2,
+  "description": "Quickly and efficiently check your grades.",
+  "browser_action": {
+    "default_icon": "assets/icon48.png",
+    "default_popup": "app/popup.html",
+    "default_title": "QuickHAC"
+  },
+  "background": {
+    "page": "app/background.html"
+  },
+  "permissions": [
+    "https://hacaccess.herokuapp.com/",
+    "https://accesscenter.roundrockisd.org/",
+    "https://gradebook.roundrockisd.org/",
+    "https://gradespeed.austinisd.org/",
+    "notifications"
+  ],
+  "icons": {
+    "16": "assets/icon16.png",
+    "38": "assets/icon38.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "web_accessible_resources": ["assets/icon-full.png"],
+  "options_page": "app/options.html",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com https://musculahq.appspot.com; object-src 'self'"
+}
