@@ -1,0 +1,6 @@
+[submodule "qhac-common"]
+	path = qhac-common
+	url = git@github.com:quickhac/qhac-common.git
+[submodule "qhac-assets"]
+	path = qhac-assets
+	url = git@github.com:quickhac/qhac-assets.git
