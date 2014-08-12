@@ -1,0 +1,47 @@
+<!-- <form name="login" ng-submit="submit()" ng-controller="LoginController">
+	Username: <input type="text" ng-model="username" name="username" /><br />
+	Password: <input type="password" ng-model="password" name="password" /><br />
+	ID: <input type="text" ng-model="id" name="username" /><br />
+	District: <select ng-model="district" ng-options="d for d in districts"></select><br />
+	<input type="submit" value="Log In" />
+</form> -->
+
+<div class="main-view" ng-controller="LoginController">
+	<div class="login">
+	<div class="logo">
+		<i class="fa fa-rocket"></i>
+		<span class="message-welcome">Welcome to<span class="app-name">Quick<span>HAC</span></span></span>
+	</div>
+
+	<form class="panel login-panel" name="login" id="login" ng-submit="submit()">
+		<div class="split-button-group">
+		<label>
+			<input type="radio" ng-model="district" name="district" value="roundrock" tabindex="1">
+			<span>RRISD</span>
+		</label>
+		<label>
+			<input type="radio" ng-model="district" name="district" value="austin" tabindex="2">
+			<span>AISD</span>
+		</label>
+		</div>
+
+		<button class="button-login" type="submit" tabindex="6" ng-disabled="{{ !enabled }}">
+			<span class="available">Login</span>
+			<span class="busy">Logging in&hellip;</span>
+		</button>
+
+		<div class="input-group">
+			<label class="text-input input-username">
+				<input type="text" ng-model="username" name="username" placeholder="Username" tabindex="3" autocomplete="off" required="" autofocus="">
+				<i class="icon-person"></i>
+			</label>
+			<label class="text-input input-password">
+				<input type="password" name="password" ng-model="password" placeholder="Password" tabindex="4" autocomplete="off" required="">
+				<i class="icon-key"></i>
+			</label>
+			<a href="https://accesscenter.roundrockisd.org/homeaccess/Register/ForgotCredentials.aspx" target="_blank" class="forgot-password">Lost your password?</a>
+		</div>
+	</form>
+	</div>
+	<small>&copy; 2014. Version 3.0</small>
+</div>

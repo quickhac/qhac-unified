@@ -1,0 +1,6 @@
+<div class="main-view" ng-controller="SelectStudentController">
+	<form ng-submit="selectStudent()" class="student-select-form">
+		<select class="student-select" ng-model="student" ng-options="student.name for student in students"></select>
+		<input type="submit">
+	</form>
+</div>
